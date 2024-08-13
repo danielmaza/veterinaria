@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">NUEVA CONSULTA</span>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="_id" name="_id" placeholder="ID" required [(ngModel)]="consulta._id">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="fecha" name="fecha" placeholder="Fecha" [(ngModel)]="consulta.fecha">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="motivo" name="motivo" placeholder="Motivo" [(ngModel)]="consulta.motivo">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="diagnostico" name="diagnostico" placeholder="Diagnostico" [(ngModel)]="consulta.diagnostico">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="tratamiento" name="tratamiento" placeholder="Tratamiento" [(ngModel)]="consulta.tratamiento">
+                        </div>
+                        <div>
+                            <button class="btn btn-secondary float-start" [routerLink]="['/consultas']">VOLVER</button>
+                            <button class="btn btn-primary float-end" type="submit" (click)="add()">GUARDAR</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

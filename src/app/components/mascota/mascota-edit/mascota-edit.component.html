@@ -1,0 +1,36 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">EDITAR MASCOTA</span>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="codigo" name="codigo" placeholder="Código" required [(ngModel)]="mascota.codigo">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="nombre" name="nombre" placeholder="Nombre" [(ngModel)]="mascota.nombre">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="especie" name="especie" placeholder="Especie" [(ngModel)]="mascota.especie">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="raza" name="raza" placeholder="Raza" [(ngModel)]="mascota.raza">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="sexo" name="sexo" placeholder="Sexo" [(ngModel)]="mascota.sexo">
+                            
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="fecha_nac" name="fecha_nac" placeholder="Fecha_nac" [(ngModel)]="mascota.fecha_nac">
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-secondary float-start" [routerLink]="['/mascotas']">VOLVER</button>
+                            <button class="btn btn-primary float-end" type="submit" (click)="actualizar()">GUARDAR</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

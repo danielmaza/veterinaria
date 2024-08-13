@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">NUEVO MÉDICO</span>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="dni" name="dni" placeholder="DNI" required [(ngModel)]="medico.dni">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="apellidos" name="apellidos" placeholder="Apellidos" [(ngModel)]="medico.apellidos">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="nombres" name="nombres" placeholder="Nombres" [(ngModel)]="medico.nombres">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="especialidad" name="especialidad" placeholder="Especialidad" [(ngModel)]="medico.especialidad">
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-secondary float-start" [routerLink]="['/medicos']">VOLVER</button>
+                            <button class="btn btn-primary float-end" type="submit" (click)="add()">GUARDAR</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

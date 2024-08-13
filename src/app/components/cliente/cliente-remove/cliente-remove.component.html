@@ -1,0 +1,36 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">ELIMINAR CLIENTE</span>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="dni" name="dni" placeholder="DNI" readonly [(ngModel)]="cliente.dni">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="apellidos" name="apellidos" placeholder="Apellidos" readonly [(ngModel)]="cliente.apellidos">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="nombres" name="nombres" placeholder="Nombres" readonly [(ngModel)]="cliente.nombres">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="Email" readonly [(ngModel)]="cliente.email">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="telefono" name="telefono" placeholder="Telefono" readonly [(ngModel)]="cliente.telefono">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="direccion" name="direccion" placeholder="Direccion" readonly [(ngModel)]="cliente.direccion">
+                        </div>
+                        <div class="mb-3">
+                            <span class="titulo">¿SEGURO QUE DESEA ELIMINAR CLIENTE?</span>
+                            <button class="btn btn-secondary float-start" [routerLink]="['/clientes']">VOLVER</button>
+                            <button class="btn btn-danger float-end" type="submit" (click)="eliminar()">ELIMINAR</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

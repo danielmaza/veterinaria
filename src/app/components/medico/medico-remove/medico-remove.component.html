@@ -1,0 +1,30 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">ELIMINAR MÉDICO</span>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="dni" name="dni" placeholder="DNI" required [(ngModel)]="medico.dni" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="apellidos" name="apellidos" placeholder="Apellidos" [(ngModel)]="medico.apellidos" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="nombres" name="nombres" placeholder="Nombres" [(ngModel)]="medico.nombres" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" id="especialidad" name="especialidad" placeholder="Especialidad" [(ngModel)]="medico.especialidad" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <span class="titulo">¿SEGURO QUE DESEA ELIMINAR MÉDICO?</span>
+                            <button class="btn btn-secondary float-start" [routerLink]="['/medicos']">VOLVER</button>
+                            <button class="btn btn-danger float-end" type="submit" (click)="eliminar()">ELIMINAR</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">LISTADO MÉDICOS</span>
+                    <button class="btn btn-success float-end"[routerLink]="['/medicos/add']">NUEVO</button>
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">DNI</th>
+                            <th scope="col">APELLIDOS</th>
+                            <th scope="col">NOMBRES</th>
+                            <th scope="col">ESPECIALIDAD</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let medico of medicos">
+                            <td>{{medico.dni}}</td>
+                            <td>{{medico.apellidos}}</td>
+                            <td>{{medico.nombres}}</td>
+                            <td>{{medico.especialidad}}</td>
+                            <td><a [routerLink]="['/medicos/edit',medico._id]"><i class="fa-solid fa-pen-to-square text-primary" title="Actualizar"></i></a></td>
+                            <td><a [routerLink]="['/medicos/remove',medico._id]"><i class="fa-solid fa-trash text-danger" title="Eliminar"></i></a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

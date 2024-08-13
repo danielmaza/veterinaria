@@ -1,0 +1,35 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">LISTADO GENERAL DE CONSULTAS</span>
+                    <button class="btn btn-success float-end"[routerLink]="['/consultas/add']">NUEVO (test)</button>
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">FECHA</th>
+                            <th scope="col">MOTIVO</th>
+                            <th scope="col">DIAGNÓSTICO</th>
+                            <th scope="col">TRATAMIENTO</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let consulta of consultas">
+                            <td>{{consulta._id}}</td>
+                            <td>{{consulta.fecha}}</td>
+                            <td>{{consulta.motivo}}</td>
+                            <td>{{consulta.diagnostico}}</td>
+                            <td>{{consulta.tratamiento}}</td>
+                            <td><a [routerLink]="['/consultas/edit',consulta._id]"><i class="fa-solid fa-pen-to-square text-primary" title="Actualizar"></i></a></td>
+                            <td><a [routerLink]="['/consultas/remove',consulta._id]"><i class="fa-solid fa-trash text-danger" title="Eliminar"></i></a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

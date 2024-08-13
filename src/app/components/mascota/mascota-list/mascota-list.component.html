@@ -1,0 +1,37 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">LISTADO GENERAL DE MASCOTAS</span>
+                    <button class="btn btn-success float-end"[routerLink]="['/mascotas/add']">NUEVO (test)</button>
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">CODIGO</th>
+                            <th scope="col">NOMBRE</th>
+                            <th scope="col">ESPECIE</th>
+                            <th scope="col">RAZA</th>
+                            <th scope="col">SEXO</th>
+                            <th scope="col">FECHA NAC</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let mascota of mascotas">
+                            <td>{{mascota.codigo}}</td>
+                            <td>{{mascota.nombre}}</td>
+                            <td>{{mascota.especie}}</td>
+                            <td>{{mascota.raza}}</td>
+                            <td>{{mascota.sexo}}</td>
+                            <td>{{mascota.fecha_nac}}</td>
+                            <td><a [routerLink]="['/mascotas/edit',mascota._id]"><i class="fa-solid fa-pen-to-square text-primary" title="Actualizar"></i></a></td>
+                            <td><a [routerLink]="['/mascotas/remove',mascota._id]"><i class="fa-solid fa-trash text-danger" title="Eliminar"></i></a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
