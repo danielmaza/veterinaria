@@ -28,6 +28,7 @@ import { BienvenidaComponent } from './components/boxes/bienvenida.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { LoginComponent } from './components/login/login.component';
 import { ConsultaRemoveComponent } from './components/consulta/consulta-remove/consulta-remove.component';
+import { ClienteMascotaComponent } from './components/cliente/cliente-mascota/cliente-mascota.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { ConsultaRemoveComponent } from './components/consulta/consulta-remove/c
     BienvenidaComponent,
     MenuComponent,
     LoginComponent,
-    ConsultaRemoveComponent
+    ConsultaRemoveComponent,
+    ClienteMascotaComponent
   ],
   imports: [
     BrowserModule,

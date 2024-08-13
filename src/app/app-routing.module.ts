@@ -28,6 +28,7 @@ import { ConsultaAddComponent } from './components/consulta/consulta-add/consult
 import { ConsultaEditComponent } from './components/consulta/consulta-edit/consulta-edit.component';
 import { ConsultaRemoveComponent } from './components/consulta/consulta-remove/consulta-remove.component';
 
+import { ClienteMascotaComponent } from './components/cliente/cliente-mascota/cliente-mascota.component';
 
 
 const routes: Routes = [
@@ -55,6 +56,8 @@ const routes: Routes = [
   { path:'consultas/add', component: ConsultaAddComponent },
   { path:'consultas/edit/:id', component: ConsultaEditComponent},
   { path:'consultas/remove/:id', component: ConsultaRemoveComponent},
+
+  { path:'cliente-mascota/:id', component: ClienteMascotaComponent },
 
 
   { path: '**', redirectTo: '', pathMatch: 'full' } //esta línea debe estar al final de las rutas (wildcard)

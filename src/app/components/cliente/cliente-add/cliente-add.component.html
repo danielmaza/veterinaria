@@ -1,29 +1,35 @@
-<div class="container mt-5">
+<div class="container mt-3">
     <div class="row">
         <div class="col-lg-6 offset-lg-3">
             <div class="card">
                 <div class="card-body text-center">
                     <span class="titulo">NUEVO CLIENTE</span>
                     <form>
-                        <div class="mb-3">
-                            <input type="text" class="form-control form-control-lg" id="dni" name="dni" placeholder="DNI" required [(ngModel)]="cliente.dni">
+                        <div class="mb-2 form-floating">
+                            <input type="text" class="form-control" id="dni" name="dni" placeholder="DNI" required [(ngModel)]="cliente.dni">
+                            <label for="dni">DNI</label>
                         </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control form-control-lg" id="apellidos" name="apellidos" placeholder="Apellidos" [(ngModel)]="cliente.apellidos">
+                        <div class="mb-2 form-floating">
+                            <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Apellidos" [(ngModel)]="cliente.apellidos">
+                            <label for="apellidos">Apellidos</label>
                         </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control form-control-lg" id="nombres" name="nombres" placeholder="Nombres" [(ngModel)]="cliente.nombres">
+                        <div class="mb-2 form-floating">
+                            <input type="text" class="form-control" id="nombres" name="nombres" placeholder="Nombres" [(ngModel)]="cliente.nombres">
+                            <label for="nombres">Nombres</label>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2 form-floating">
                             <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="Email" [(ngModel)]="cliente.email">
+                            <label for="email">Email</label>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2 form-floating">
                             <input type="text" class="form-control form-control-lg" id="telefono" name="telefono" placeholder="Telefono" [(ngModel)]="cliente.telefono">
+                            <label for="telefono">Teléfono</label>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2 form-floating">
                             <input type="text" class="form-control form-control-lg" id="direccion" name="direccion" placeholder="Direccion" [(ngModel)]="cliente.direccion">
+                            <label for="direccion">Dirección</label>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <button class="btn btn-secondary float-start" [routerLink]="['/clientes']">VOLVER</button>
                             <button class="btn btn-primary float-end" type="submit" (click)="add()">GUARDAR</button>
                         </div>

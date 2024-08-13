@@ -5,19 +5,23 @@
                 <div class="card-body text-center">
                     <span class="titulo">NUEVO MÉDICO</span>
                     <form>
-                        <div class="mb-3">
+                        <div class="mb-2 form-floating">
                             <input type="text" class="form-control form-control-lg" id="dni" name="dni" placeholder="DNI" required [(ngModel)]="medico.dni">
+                            <label for="dni">DNI</label>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2 form-floating">
                             <input type="text" class="form-control form-control-lg" id="apellidos" name="apellidos" placeholder="Apellidos" [(ngModel)]="medico.apellidos">
+                            <label for="apellidos">Apellidos</label>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2 form-floating">
                             <input type="text" class="form-control form-control-lg" id="nombres" name="nombres" placeholder="Nombres" [(ngModel)]="medico.nombres">
+                            <label for="nombres">Nombres</label>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2 form-floating">
                             <input type="text" class="form-control form-control-lg" id="especialidad" name="especialidad" placeholder="Especialidad" [(ngModel)]="medico.especialidad">
+                            <label for="especialidad">Especialidad</label>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <button class="btn btn-secondary float-start" [routerLink]="['/medicos']">VOLVER</button>
                             <button class="btn btn-primary float-end" type="submit" (click)="add()">GUARDAR</button>
                         </div>

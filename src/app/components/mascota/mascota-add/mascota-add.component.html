@@ -1,29 +1,39 @@
-<div class="container mt-5">
+<div class="container mt-3">
     <div class="row">
         <div class="col-lg-6 offset-lg-3">
             <div class="card">
                 <div class="card-body text-center">
                     <span class="titulo">NUEVA MASCOTA</span>
                     <form>
-                        <div class="mb-3">
+                        <div class="mb-2">
+                            <span class="titulo2 float-start">Cliente</span>
+                            <select class="form-select form-select-lg"  name="cliente" id="cliente" [(ngModel)]="mascota.id_cliente">
+                                <option *ngFor="let cliente of clientes" [value]="cliente._id" [selected]="cliente._id === mascota.id_cliente">{{cliente.dni}}-{{cliente.nombres}} {{cliente.apellidos}}</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
                             <input type="text" class="form-control form-control-lg" id="codigo" name="codigo" placeholder="Código" required [(ngModel)]="mascota.codigo">
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <input type="text" class="form-control form-control-lg" id="nombre" name="nombre" placeholder="Nombre" [(ngModel)]="mascota.nombre">
                         </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control form-control-lg" id="especie" name="especie" placeholder="Especie" [(ngModel)]="mascota.especie">
+                        <div class="mb-2">
+                            <select class="form-select form-select-lg"  name="especie" id="especie" [(ngModel)]="mascota.especie">
+                                <option *ngFor="let e of getEspecies()" [value]="e">{{e}}</option>
+                            </select>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <input type="text" class="form-control form-control-lg" id="raza" name="raza" placeholder="Raza" [(ngModel)]="mascota.raza">
                         </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control form-control-lg" id="sexo" name="sexo" placeholder="Sexo" [(ngModel)]="mascota.sexo">
+                        <div class="mb-2">
+                            <input type="radio" name="sexo" value="Macho" class="form-check-input" [(ngModel)]="mascota.sexo">Macho
+                            <input type="radio" name="sexo" value="Hembra" [(ngModel)]="mascota.sexo" >Hembra
                         </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control form-control-lg" id="fecha_nac" name="fecha_nac" placeholder="Fecha_nac" [(ngModel)]="mascota.fecha_nac">
+                        <div class="mb-2">
+                            <input type="date" name="fecha_nac" class="form-control form-control-lg" id="fecha_nac" placeholder="Fecha_nac" [(ngModel)]="mascota.fecha_nac">
+                            <!-- <input type="text" class="form-control form-control-lg" id="fecha_nac" name="fecha_nac" placeholder="Fecha_nac" [(ngModel)]="mascota.fecha_nac"> -->
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <button class="btn btn-secondary float-start" [routerLink]="['/mascotas']">VOLVER</button>
                             <button class="btn btn-primary float-end" type="submit" (click)="add()">GUARDAR</button>
                         </div>

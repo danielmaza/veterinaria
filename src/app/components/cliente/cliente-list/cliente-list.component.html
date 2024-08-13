@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div class="container mt-3">
     <div class="row">
         <div class="col-lg-8 offset-lg-2">
             <div class="card">
@@ -19,7 +19,7 @@
                         </thead>
                         <tbody>
                           <tr *ngFor="let cliente of clientes">
-                            <td>{{cliente.dni}}</td>
+                            <td><a title="Ver detale" [routerLink]="['/cliente-mascota',cliente._id]">{{cliente.dni}}</a></td>
                             <td>{{cliente.apellidos}}</td>
                             <td>{{cliente.nombres}}</td>
                             <td>{{cliente.email}}</td>

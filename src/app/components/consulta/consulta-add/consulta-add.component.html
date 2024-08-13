@@ -1,24 +1,26 @@
-<div class="container mt-5">
+<div class="container mt-3">
     <div class="row">
         <div class="col-lg-6 offset-lg-3">
             <div class="card">
                 <div class="card-body text-center">
                     <span class="titulo">NUEVA CONSULTA</span>
                     <form>
-                        <div class="mb-3">
-                            <input type="text" class="form-control form-control-lg" id="_id" name="_id" placeholder="ID" required [(ngModel)]="consulta._id">
+                        <div class="mb-2 form-floating">
+                            <input type="date" class="form-control form-control-lg" id="fecha" name="fecha" placeholder="Fecha" [(ngModel)]="consulta.fecha">
+                            <label for="fecha">Fecha</label>
                         </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control form-control-lg" id="fecha" name="fecha" placeholder="Fecha" [(ngModel)]="consulta.fecha">
-                        </div>
-                        <div class="mb-3">
+                        <div class="mb-2 form-floating">
                             <input type="text" class="form-control form-control-lg" id="motivo" name="motivo" placeholder="Motivo" [(ngModel)]="consulta.motivo">
+                            <label for="diagnostico">Motivo</label>
                         </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control form-control-lg" id="diagnostico" name="diagnostico" placeholder="Diagnostico" [(ngModel)]="consulta.diagnostico">
+                        <div class="mb-2 form-floating">
+                            <textarea class="form-control" placeholder="Dianóstico de la consulta" id="diagnostico" name="diagnostico"  style="height: 100px" [(ngModel)]="consulta.diagnostico"></textarea>
+                            <label for="diagnostico">Diagnóstico</label>
+                            <!-- <input type="text" class="form-control form-control-lg" id="diagnostico" name="diagnostico" placeholder="Diagnostico" [(ngModel)]="consulta.diagnostico"> -->
                         </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control form-control-lg" id="tratamiento" name="tratamiento" placeholder="Tratamiento" [(ngModel)]="consulta.tratamiento">
+                        <div class="mb-2 form-floating">
+                            <textarea class="form-control" placeholder="Tratamiento de la consulta" id="tratamiento" name="tratamiento"  style="height: 100px" [(ngModel)]="consulta.tratamiento"></textarea>
+                            <label for="diagnostico">Tratamiento</label>
                         </div>
                         <div>
                             <button class="btn btn-secondary float-start" [routerLink]="['/consultas']">VOLVER</button>

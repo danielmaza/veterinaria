@@ -1,31 +1,32 @@
-<div class="container mt-5">
+<div class="container mt-3">
     <div class="row">
         <div class="col-lg-6 offset-lg-3">
             <div class="card">
                 <div class="card-body text-center">
                     <span class="titulo">ELIMINAR MASCOTA</span>
                     <form>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <input type="text" class="form-control form-control-lg" id="codigo" name="codigo" placeholder="Código" required [(ngModel)]="mascota.codigo" readonly>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <input type="text" class="form-control form-control-lg" id="nombre" name="nombre" placeholder="Nombre" [(ngModel)]="mascota.nombre" readonly>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <input type="text" class="form-control form-control-lg" id="especie" name="especie" placeholder="Especie" [(ngModel)]="mascota.especie" readonly>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <input type="text" class="form-control form-control-lg" id="raza" name="raza" placeholder="Raza" [(ngModel)]="mascota.raza" readonly>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <input type="text" class="form-control form-control-lg" id="sexo" name="sexo" placeholder="Sexo" [(ngModel)]="mascota.sexo" readonly>
                             
                         </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control form-control-lg" id="fecha_nac" name="fecha_nac" placeholder="Fecha_nac" [(ngModel)]="mascota.fecha_nac" readonly>
+                        <div class="mb-2">
+                            <input type="date" class="form-control form-control-lg" name="fecha_nac" class="form-control form-control-lg" id="fecha_nac" placeholder="Fecha_nac" [(ngModel)]="mascota.fecha_nac" readonly>
+                            <!-- <input type="text" class="form-control form-control-lg" id="fecha_nac" name="fecha_nac" placeholder="Fecha_nac" [(ngModel)]="mascota.fecha_nac" readonly> -->
                         </div>
-                        <div class="mb-3">
-                            <span class="titulo">¿SEGURO QUE DESEA ELIMINAR MASCOTA?</span>
+                        <div class="mb-2">
+                            <span class="titulo2">¿SEGURO QUE DESEA ELIMINAR MASCOTA?</span><br>
                             <button class="btn btn-secondary float-start" [routerLink]="['/mascotas']">VOLVER</button>
                             <button class="btn btn-danger float-end" type="submit" (click)="eliminar()">EIMINAR</button>
                         </div>

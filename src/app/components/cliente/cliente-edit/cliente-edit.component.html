@@ -1,29 +1,29 @@
-<div class="container mt-5">
+<div class="container mt-3">
     <div class="row">
         <div class="col-lg-6 offset-lg-3">
             <div class="card">
                 <div class="card-body text-center">
                     <span class="titulo">EDITAR CLIENTE</span>
                     <form>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <input type="text" class="form-control form-control-lg" id="dni" name="dni" placeholder="DNI" required [(ngModel)]="cliente.dni">
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <input type="text" class="form-control form-control-lg" id="apellidos" name="apellidos" placeholder="Apellidos" [(ngModel)]="cliente.apellidos">
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <input type="text" class="form-control form-control-lg" id="nombres" name="nombres" placeholder="Nombres" [(ngModel)]="cliente.nombres">
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="Email" [(ngModel)]="cliente.email">
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <input type="text" class="form-control form-control-lg" id="telefono" name="telefono" placeholder="Telefono" [(ngModel)]="cliente.telefono">
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <input type="text" class="form-control form-control-lg" id="direccion" name="direccion" placeholder="Direccion" [(ngModel)]="cliente.direccion">
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <button class="btn btn-secondary float-start" [routerLink]="['/clientes']">VOLVER</button>
                             <button class="btn btn-primary float-end" type="submit" (click)="actualizar()">GUARDAR</button>
                         </div>

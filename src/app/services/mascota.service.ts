@@ -16,7 +16,7 @@ export class MascotaService {
     mascota1.id_cliente=1;
     mascota1.codigo='P01';
     mascota1.nombre = 'Firulais';
-    mascota1.especie = 'Canino';
+    mascota1.especie = 'Perro';
     mascota1.raza = 'Mestizo';
     mascota1.sexo = 'Macho';
     mascota1.fecha_nac = '2020-01-01';

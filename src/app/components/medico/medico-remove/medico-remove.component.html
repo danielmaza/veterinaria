@@ -5,20 +5,20 @@
                 <div class="card-body text-center">
                     <span class="titulo">ELIMINAR MÉDICO</span>
                     <form>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <input type="text" class="form-control form-control-lg" id="dni" name="dni" placeholder="DNI" required [(ngModel)]="medico.dni" readonly>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <input type="text" class="form-control form-control-lg" id="apellidos" name="apellidos" placeholder="Apellidos" [(ngModel)]="medico.apellidos" readonly>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <input type="text" class="form-control form-control-lg" id="nombres" name="nombres" placeholder="Nombres" [(ngModel)]="medico.nombres" readonly>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <input type="text" class="form-control form-control-lg" id="especialidad" name="especialidad" placeholder="Especialidad" [(ngModel)]="medico.especialidad" readonly>
                         </div>
-                        <div class="mb-3">
-                            <span class="titulo">¿SEGURO QUE DESEA ELIMINAR MÉDICO?</span>
+                        <div class="mb-2">
+                            <span class="titulo2">¿SEGURO QUE DESEA ELIMINAR MÉDICO?</span><br>
                             <button class="btn btn-secondary float-start" [routerLink]="['/medicos']">VOLVER</button>
                             <button class="btn btn-danger float-end" type="submit" (click)="eliminar()">ELIMINAR</button>
                         </div>
